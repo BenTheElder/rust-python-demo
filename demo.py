@@ -23,6 +23,10 @@ if not f:
 
 demo = cdll.LoadLibrary(f[0])
 
+pystr = "(And Python!)"
+c_s = c_char_p(pystr)
+
 hello_world = demo.hello_world
 hello_world.restype = c_char_p
-print("%s" % hello_world())
+hello_world.argtypes = [c_char_p]
+print("%s" % hello_world(c_s))
