@@ -2,7 +2,7 @@ python-rust-demo
 =====================
 Simple demo of using rust from python via python ctypes and rust libc.
 
-Tested on OSX 10.10.1 with rustc 0.13.0-nightly (cc19e3380 2014-12-20 20:00:36 +0000) and cargo with Python 2.7.6 (v2.7.6:3a1db0d2747e, Nov 10 2013, 00:42:54)
+Tested on OSX 10.10.1 with rustc 0.13.0-nightly (cc19e3380 2014-12-20 20:00:36 +0000) and cargo 0.0.1-pre-nightly (10efa79 2014-12-21 07:28:44 +0000) with Python 2.7.6 (v2.7.6:3a1db0d2747e, Nov 10 2013, 00:42:54)
 
 Instructions:
 
