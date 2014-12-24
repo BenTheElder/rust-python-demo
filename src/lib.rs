@@ -13,8 +13,8 @@ pub struct DemoStruct {
 impl Copy for DemoStruct {}
 
 #[no_mangle]
-pub extern fn get_demo_struct() -> *mut DemoStruct {
-	&mut DemoStruct{a: 0, b: 1337}
+pub extern fn get_demo_struct() -> *const DemoStruct {
+	&DemoStruct{a: 0, b: 1337}
 }
 
 
