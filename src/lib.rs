@@ -31,9 +31,10 @@ pub struct CstrArr {
 pub extern fn get_array_of_strings() -> *const CstrArr {
 	let rust_vec = vec!["Hello","world","from","rust"];
 	unsafe {
-		&CstrArr{len: rust_vec.len().to_u32().unwrap(),
+		&CstrArr {
+			len: rust_vec.len().to_u32().unwrap(),
 			data: Vec::from_fn(rust_vec.len(),
-								|s| rust_vec[s].to_c_str().into_inner()).as_ptr()
+				|s| rust_vec[s].to_c_str().into_inner()).as_ptr()
 		}
 	}
 }

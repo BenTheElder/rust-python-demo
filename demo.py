@@ -13,7 +13,7 @@ if sys.platform == "linux" or sys.platform == "linux2":
 elif sys.platform == "darwin":
 	ext = ".dylib"
 elif sys.platform == "win32":
-    ext = ".dll"
+	ext = ".dll"
 else:
 	print("Error: Unrecognized Platform.")
 	sys.exit(-1)
