@@ -1,5 +1,5 @@
 [package]
-name = "rust-python-demo"
+name = "demo"
 version = "0.1.0"
 authors = ["Benjamin Elder <ben.the.elder@gmail.com>"]
 repository = "https://github.com/BenTheElder/rust-python-demo.git"
@@ -9,5 +9,5 @@ license = "MIT"
 
 [lib]
 name = "demo"
-path = "demo.rs"
+path = "src/lib.rs"
 crate-type = ["dylib"]
