@@ -58,3 +58,26 @@ demo_struct = p_demo_struct.contents
 #print the contents.
 print("demo.get_demo_struct():\n{a: %d,b: %d}"%(demo_struct.a, demo_struct.b))
 
+
+print("")
+
+
+#create class to represent our array of strings structure.
+class StringArray(Structure):
+	_fields_ = [("len", c_uint), ("data", POINTER(c_char_p))]
+
+	def to_list(self):
+		return self.data[0:self.len]
+
+#set result type for method
+demo.get_array_of_strings.restype = POINTER(StringArray)
+
+#call and store pointer
+p_string_array = demo.get_array_of_strings()
+#get pointer contents
+string_array = p_string_array.contents
+#convert to python list
+data = string_array.to_list()
+
+print("demo.get_array_of_strings():\n{}".format(data))
+
