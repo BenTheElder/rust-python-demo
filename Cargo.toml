@@ -1,6 +1,6 @@
 [package]
 name = "demo"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Benjamin Elder <ben.the.elder@gmail.com>"]
 repository = "https://github.com/BenTheElder/rust-python-demo.git"
 description = "demo of rust dynamic library"
@@ -11,3 +11,6 @@ license = "MIT"
 name = "demo"
 path = "src/lib.rs"
 crate-type = ["dylib"]
+
+[dependencies]
+libc = "0.1.8"

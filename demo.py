@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import sys
 import glob
@@ -80,4 +81,3 @@ string_array = p_string_array.contents
 data = string_array.to_list()
 
 print("demo.get_array_of_strings():\n{}".format(data))
-
